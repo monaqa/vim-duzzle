@@ -712,3 +712,106 @@ call duzzle#add_puzzle('_', {
 " TODO:lk%を使い、kも使わないと脱出できないroomの作成
 " TODO:使用できるkeyを極限まで制限することでpuzzle性が増すようなroomの作成
 " TODO:巨大マップで、クリア難易度が高いroomの作成
+
+call duzzle#add_puzzle('monaqa_room', {
+  \ 'name' : 'monaqa room: The power of VISUAL mode',
+  \ 'enable_keys' : {
+  \   'n': 'hjklv',
+  \   'v': ['h', 'j', 'k', 'l', '<Esc>', 'i{', 'i}'],
+  \ },
+  \ 'disable_key_count' : 1,
+  \ 'room' : [
+  \ '+--------+            +--------+',
+  \ '|s     { |            | }     g|',
+  \ '+--------+            +--------+',
+  \ ],
+  \ })
+
+call duzzle#add_puzzle('monaqa_room', {
+  \ 'name' : 'monaqa room: The power of indent',
+  \ 'enable_keys' : {
+  \   'n' : 'hjkl><',
+  \   'o' : ['>', '<'],
+  \ },
+  \ 'room' : [
+  \ '',
+  \ '+---------------+',
+  \ '|             s |',
+  \ '|               |',
+  \ '|               |',
+  \ '| g             |',
+  \ '+---------------+',
+  \ '',
+  \ ],
+  \ 'options' : [
+  \   'setlocal modifiable',
+  \   'setlocal expandtab',
+  \   'setlocal shiftwidth=4',
+  \ ],
+  \ })
+
+call duzzle#add_puzzle('monaqa_room', {
+  \ 'name' : 'monaqa room: The power of increment',
+  \ 'enable_keys' : ['l', '<C-a>'],
+  \ 'disable_key_count' : 1,
+  \ 'room' : [
+  \ '+-------+',
+  \ '|s  -1 g|',
+  \ '+-------+',
+  \ ],
+  \ 'options' : [
+  \   'setlocal modifiable',
+  \ ],
+  \ })
+
+call duzzle#add_puzzle('monaqa_room', {
+  \ 'name' : 'monaqa room: Pangram',
+  \ 'enable_keys' : {
+  \   'n' : 'hjkld',
+  \   'o' : ['w', 'iw'],
+  \ },
+  \ 'disable_key_count' : 1,
+  \ 'room' : [
+  \ '+----------------------+',
+  \ '| s           |--------|',
+  \ '|           + |--------|',
+  \ '|           | |--------|',
+  \ '| The quick |---| |----|',
+  \ '|           | |--------|',
+  \ '| brown fox |--| |-----|',
+  \ '|           | |--------|',
+  \ '| jump over |----| |---|',
+  \ '|           | |--------|',
+  \ '| the lazy  |---| |----|',
+  \ '|           | |--------|',
+  \ '+-----------+ +--------|',
+  \ '| dog.                 |',
+  \ '+----------------------+',
+  \ ],
+  \ 'options' : [
+  \   'setlocal modifiable',
+  \ ],
+  \ })
+
+call duzzle#add_puzzle('monaqa_room', {
+  \ 'name' : 'monaqa room: Five-storied pagoda',
+  \ 'enable_keys' : 'hjklx%',
+  \ 'disable_key_count' : 1,
+  \ 'room' : [
+  \ '+-------+',
+  \ '| s     |',
+  \ '| ( { ) |',
+  \ '+-------+',
+  \ '| [ { } |',
+  \ '+-------+',
+  \ '| ) }   |',
+  \ '+-------+',
+  \ '| ) [ ] |',
+  \ '+-------+',
+  \ '| )   g |',
+  \ '+-------+',
+  \ ],
+  \ 'options' : [
+  \   'setlocal modifiable',
+  \ ],
+  \ })

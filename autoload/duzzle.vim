@@ -374,6 +374,14 @@ function! s:print_enable_keys(keys) " {{{
       call s:add_line(enable_command['o'][key])
     endfor
   endif
+
+  if has_key(keydict, 'v')
+    call s:add_line('')
+    call s:add_line(s:message.get('available_visual_command'))
+    for key in keydict['v']
+      call s:add_line(enable_command['v'][key])
+    endfor
+  endif
 endfunction
 " }}}
 
@@ -392,6 +400,14 @@ function! s:print_limit_key_use(limit_key_use) " {{{
     call s:add_line('')
     call s:add_line(s:message.get('limit_of_operator_command_count'))
     for [key, cnt] in items(get(a:limit_key_use, 'o', {}))
+      call s:add_line(key.':'.cnt)
+    endfor
+  endif
+
+  if has_key(a:limit_key_use, 'v')
+    call s:add_line('')
+    call s:add_line(s:message.get('limit_of_visual_command_count'))
+    for [key, cnt] in items(get(a:limit_key_use, 'v', {}))
       call s:add_line(key.':'.cnt)
     endfor
   endif

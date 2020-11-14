@@ -40,6 +40,7 @@
   ],
   'available_normal_command' : '[Command that can be used in this room]',
   'available_operator_command' : '[Commands are allowed after the d in this room]',
+  'available_visual_command' : '[VISUAL command that can be used in this room]',
   'enable_command' : {
     'n' : {
       'h' : 'h: move to left',
@@ -70,10 +71,34 @@
       'N' : 'N: repeat the latest "/" or "?" in the opposite direction',
       '%' : '%: find the next item in this line after or under the cursor and jump to its match',
       'd' : 'd: delete text that {motion} moves over',
+      '<C-a>' : '<C-a>: increment a number under or after the cursor',
+      '<C-x>' : '<C-x>: decrement a number under or after the cursor',
+      '>' : '>: increase indentation by one to the text that {motion} moves over',
+      '<' : '<: decrease indentation by one to the text that {motion} moves over',
+      '.' : '.: repeat the previous text editing operation',
+      'x' : 'x: delete the character on the cursor',
+      'X' : 'X: delete the character just before the cursor',
+      'v' : 'v: enter VISUAL mode',
     },
     'o' : {
       'f' : 'f: to occurrence of {char} to the right',
       't' : 't: till before occurrence of {char} to the right',
+      'w' : 'w: move to forward word',
+      'iw' : 'iw: select inner word',
+      'ip' : 'ip: select inner paragraph (section sandwiched by a blank line)',
+      '>' : '>: increase indentation by one to the cursor line (press ">>")',
+      '<' : '<: decrease indentation by one to the cursor line (press "<<")',
+    },
+    'v' : {
+      '<Esc>' : '<Esc>: exit VISUAL mode',
+      'h' : 'h: move to left',
+      'j' : 'j: move to down',
+      'k' : 'k: move to up',
+      'l' : 'l: move to right',
+      'd' : 'd: delete the selected text and exit VISUAL mode',
+      'i{' : 'i{: select inner { ... } that includes the cursor',
+      'i}' : 'i}: select inner { ... } that includes the cursor',
+      'i"' : 'i": select inner " ... " that includes the cursor',
     },
   },
 
@@ -90,6 +115,7 @@
 
   'limit_of_normal_command_count' : '[limit the executable times of command]',
   'limit_of_operator_command_count' : '[Limit the executable times of command that are allowed after the d command]',
+  'limit_of_visual_command_count' : '[Limit the executable times of command that are allowed in VISUAL mode]',
 
 }
 
