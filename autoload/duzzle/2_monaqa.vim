@@ -7,7 +7,9 @@ call duzzle#add_puzzle('monaqa_room', {
   \ 'disable_key_count' : 1,
   \ 'room' : [
   \ '+--------+            +--------+',
+  \ '|        |            |        |',
   \ '|s     { |            | }     g|',
+  \ '|        |            |        |',
   \ '+--------+            +--------+',
   \ ],
   \ })
@@ -21,7 +23,9 @@ call duzzle#add_puzzle('monaqa_room', {
   \ 'disable_key_count' : 1,
   \ 'room' : [
   \ '+--------+            +--------+',
+  \ '|        |            |        |',
   \ '|s     " |            | "     g|',
+  \ '|        |            |        |',
   \ '+--------+            +--------+',
   \ ],
   \ })
@@ -35,7 +39,9 @@ call duzzle#add_puzzle('monaqa_room', {
   \ 'disable_key_count' : 1,
   \ 'room' : [
   \ '+--------+            +--------+',
+  \ '|        |            |        |',
   \ '|s "foo" |            | "bar" g|',
+  \ '|        |            |        |',
   \ '+--------+            +--------+',
   \ ],
   \ })
@@ -49,7 +55,9 @@ call duzzle#add_puzzle('monaqa_room', {
   \ 'disable_key_count' : 1,
   \ 'room' : [
   \ '+--------+            +--------+',
+  \ '|        |            |        |',
   \ '| g    { |            | }    s |',
+  \ '|        |            |        |',
   \ '+--------+            +--------+',
   \ ],
   \ })
@@ -63,7 +71,9 @@ call duzzle#add_puzzle('monaqa_room', {
   \ 'disable_key_count' : 1,
   \ 'room' : [
   \ '+--------+            +--------+',
+  \ '|        |            |        |',
   \ '| g    { |            | }    s |',
+  \ '|        |            |        |',
   \ '+--------+            +--------+',
   \ ],
   \ 'options' : [
@@ -200,7 +210,9 @@ call duzzle#add_puzzle('monaqa_room', {
   \ 'disable_key_count' : 1,
   \ 'room' : [
   \ '+-------+',
+  \ '|   -   |',
   \ '|g  -3 s|',
+  \ '|   -   |',
   \ '+-------+',
   \ ],
   \ 'options' : [
@@ -358,7 +370,7 @@ call duzzle#add_puzzle('monaqa_room', {
 call duzzle#add_puzzle('monaqa_extra', {
  \ 'name' : 'monaqa extra room 1: Key cylinder',
  \ 'enable_keys' : {
- \   'n' : 'hjkld',
+ \   'n' : ['h', 'j', 'k', 'l', 'd', 'w', 'b', 'e', 'ge'],
  \   'o' : ['w', 'iw'],
  \ },
  \ 'disable_key_count' : 1,
@@ -366,13 +378,13 @@ call duzzle#add_puzzle('monaqa_extra', {
  \ '+-----------------------+',
  \ '|              |--------|',
  \ '|            + |--------|',
- \ '| The quick  |---| |--------|',
+ \ '| The quick  |--| |--------|',
  \ '|            | |--------|',
  \ '| brown fox  |--| |--------|',
  \ '|            | |--------|',
  \ '| jumps over |-----| |--------|',
  \ '|            | |--------|',
- \ '| the lazy   |--| |--------|',
+ \ '| the lazy   |----| |--------|',
  \ '|            | |--------|',
  \ '+------------+ +--------|',
  \ '| dog.                  |',

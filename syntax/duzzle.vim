@@ -4,8 +4,8 @@ endif
 
 syntax match   duzzleField  / /      contained
 syntax match   duzzleWall   /[-|+]/  contained
-syntax match   duzzleStart  /\<s\>/  contained
-syntax match   duzzleEnd    /\<g\>/  contained
+syntax match   duzzleStart  /s/  contained
+syntax match   duzzleEnd    /g/  contained
 
 syntax region DuzzleMap  start=/\%^/ end=/^\ze\[.*\]/ contains=duzzleField,duzzleWall,duzzleStart,duzzleEnd
 
